@@ -1,0 +1,21 @@
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Podaj liczbę całkowitą n: ");
+            int n = int.Parse(Console.ReadLine());
+            int suma = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    suma += i;
+                }
+            }
+            Console.WriteLine($"Suma liczb parzystych od 1 do {n} wynosi: {suma}");
+
+        }
+    }
+}
