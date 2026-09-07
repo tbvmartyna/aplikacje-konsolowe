@@ -1,0 +1,15 @@
+namespace roz2zad3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Podaj swoje imię: ");
+            string imie = Console.ReadLine();
+            Console.Write("Podaj rok urodzenia: ");
+            string rokUrodzenia = Console.ReadLine();
+            int wiek = 2026 - int.Parse(rokUrodzenia);
+            Console.WriteLine($"Witaj {imie}, masz {wiek} lat.");
+        }
+    }
+}
