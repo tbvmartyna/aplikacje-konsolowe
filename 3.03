@@ -1,0 +1,30 @@
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Podaj liczbę punktów: ");
+            int liczba = Convert.ToInt32(Console.ReadLine());
+            if (liczba >= 90 && liczba <= 100)
+            {
+                Console.WriteLine("Ocena bardzo dobra");
+            }
+            else if (liczba >= 75 && liczba <= 89)
+            {
+                Console.WriteLine("Ocena dobra");
+            }
+            else if (liczba >= 50 && liczba <= 74)
+            {
+                Console.WriteLine("Ocena dostateczna");
+            }
+            else if (liczba < 50)
+            {
+                Console.WriteLine("Ocena niedostateczna");
+            }
+           
+           
+            
+        }
+    }
+}
