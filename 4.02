@@ -1,0 +1,16 @@
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Podaj liczbę całkowitą: ");
+            int liczba = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{liczba} x {i} = {liczba * i}");
+            }
+
+        }
+    }
+}
