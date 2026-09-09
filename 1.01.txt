@@ -1,0 +1,7 @@
+zad1
+1.Matoda Main to punkt startowy programu i zawsze od niego rozpoczyna się działanie kodu
+2.Console.WriteLine - wyswietla tekst i przechodzi do nowej linii
+  Console.Write - wyswietla tekst ale nie przechodzi do nowej linii
+3.Console.ReadLine zwraca tekst, lancuch znakow
+4.Kompilacja to tłumaczenie kodu na jezyk maszynowy, bez tego program by nie dzialal 
+5.Każdą instrukcję kończymy średnikiem
