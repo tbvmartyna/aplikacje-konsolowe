@@ -1,0 +1,14 @@
+Czym różni się operator = od operatora ==? 
+1.Znak = przypisuje wartość zmiennej, natomiast == sprawdza, czy dwie wartości są równe.
+
+Jaki wynik zwróci wyrażenie 17 % 5 i co oznacza operator %? 
+2.To wyrażenie zwróci wynik 2, % oznacza resztę z dzielenia
+
+Kiedy cały warunek połączony operatorem && jest prawdziwy, a kiedy warunek połączony operatorem ||? 
+3.Gdy jest operator && oba warunki muszą być prawdziwe, gdy || musi być prawdziwy przynajmniej jeden.
+
+Do czego służy słowo break w instrukcji switch i co się stanie, jeśli je pominiemy? 
+4.Break kończy dany przypadek, pominięcie go powoduje błąd w kompilacji.
+
+Jakiego typu wartość zwracają operatory porównania? 
+5.Zwracają wartość logiczną typu bool.
