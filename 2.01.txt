@@ -1,0 +1,17 @@
+Wymień trzy cechy każdej zmiennej. 
+1.
+-typ, który określa, jakie wartości może przechowywać
+-nazwę, dzięki której odwołujemy się do niej w kodzie
+-wartość, którą aktualnie przechowuje
+ 
+Jaka jest różnica między deklaracją a inicjalizacją zmiennej? 
+2. Deklaracja to poinformowanie programu o tworzeniu zmiennej o określonej nazwie i typie a inicjalizacja to przypisanie wartości zmiennej.
+
+Który typ danych wybierzemy do przechowywania ceny produktu z groszami, a który do liczby uczniów? Uzasadnij. 
+3.Do ceny produktu przypiszemy dobule, który przechowuje liczby z przecinkami. Do liczby uczniów wybieramy int, który jest uzywany do liczb calkowitych.
+
+Dlaczego nie możemy bezpośrednio dodać do siebie dwóch wartości pobranych metodą Console.ReadLine? 
+4.Ponieważ, metoda Console.ReadLine zwraca tekst, aby dodać do siebie wartości musimy najpierw skonwertować je na liczby.
+
+Czym różni się zapis 'A' od zapisu "A"?
+5. Zapis 'A' to pojedynczy znak typu char, "A" to łańcuch znaków typu string.
