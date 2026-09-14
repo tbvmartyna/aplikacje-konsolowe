@@ -1,0 +1,43 @@
+using System;
+
+
+
+namespace ZgadnijLiczbe
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+
+            int liczba;    // kolejne próby gracza 
+
+
+            Console.WriteLine("Wybierz liczbę od 1 do 100.");
+            liczba = int.Parse(Console.ReadLine());
+
+            if (liczba >= 1 && liczba <= 100 && liczba % 2 == 0)
+            {
+                Console.WriteLine("Twoja liczba jest parzysta");
+
+            }
+            else if(liczba >= 1 && liczba <= 100 && liczba % 2 != 0)
+            {
+                Console.WriteLine("Twoja liczba jest nieparzysta");
+            }
+            else
+                Console.WriteLine("liczba jest poza przedziałem");
+
+
+          
+
+        }
+
+    }
+
+}
