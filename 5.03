@@ -1,0 +1,76 @@
+using System;
+
+
+
+namespace ZgadnijLiczbe
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            int sekret = 42;  
+            int proba = 0;    
+            int liczbaProb= 7;
+
+
+
+            Console.WriteLine("Witaj w grze Zgadnij liczbę.");
+
+            Console.WriteLine("Komputer wybrał liczbę od 1 do 100.");
+
+
+
+            do
+
+            {
+
+                Console.Write("Podaj swoją liczbę: ");
+
+                proba = int.Parse(Console.ReadLine());
+
+                liczbaProb--;
+
+
+                if (proba < sekret)
+
+                {
+
+                    Console.WriteLine($"Za mało. Spróbuj większej liczby.Liczba prób: {liczbaProb} ");
+
+                }
+
+                else if (proba > sekret)
+
+                {
+
+                    Console.WriteLine($"Za dużo. Spróbuj mniejszej liczby.Liczba prób: {liczbaProb}");
+
+                }
+                else if(proba == sekret)
+                {
+                    Console.WriteLine("Brawo, odgadłeś liczbę!");
+                }
+                if (liczbaProb == 0)
+                {
+                    Console.WriteLine($"Liczba to {sekret} , przegrałeś!!!");
+                    break;
+                }
+
+            } while (proba != sekret ) ; 
+           
+
+            
+
+            Console.ReadKey();
+
+        }
+
+    }
+
+}
