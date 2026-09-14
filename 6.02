@@ -1,0 +1,40 @@
+namespace ZgadnijLiczbe
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+            int suma = 0;
+            int[] liczby = new int[6];
+            for (int i = 0; i < 6; i++)
+            {
+                Console.Write("Podaj liczbę nr " + (i + 1) + ":");
+                liczby[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+            for (int i = 0; i < liczby.Length; i++) suma += liczby[i];
+
+            Console.WriteLine($"Suma: {suma}");
+
+            double srednia = (double)suma / liczby.Length;
+
+            int licznik = 0;
+            foreach (double liczba in liczby)
+                if (liczba > srednia)
+                    licznik++;
+
+            Console.WriteLine($"\nŚrednia: {srednia:F2}");
+            Console.WriteLine($"Liczba elementów większych od średniej: {licznik}");
+
+            Console.ReadKey();
+
+        }
+
+    }
+
+}
