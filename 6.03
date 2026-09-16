@@ -1,0 +1,45 @@
+using System.Linq.Expressions;
+
+namespace ZgadnijLiczbe
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+            Console.Write("Ile liczb chcesz wprowadzić?");
+            int ile = Convert.ToInt32(Console.ReadLine());
+            int[] liczby = new int[ile];
+            int min = liczby[0];
+            int max = liczby[0];
+            int indeksMin = 0;
+            int indeksMax = 0;
+            for (int i = 0; i < liczby.Length; i++)
+            {
+                Console.Write("Podaj liczbę nr" + (i + 1) + ":");
+                liczby[i] = Convert.ToInt32(Console.ReadLine());
+                if (liczby[i] < min)
+                {
+                    min = liczby[i];
+                    indeksMin = i;
+                }
+                if (liczby[i] > max)
+                {
+                    max = liczby[i];
+                    indeksMax = i;
+                }
+
+               
+            }
+            Console.WriteLine("Najmniejsza wartość to " + min + " na pozycji" + (indeksMin + 1) + ".");
+            Console.WriteLine("Największa wartość to " + max + " na pozycji " + (indeksMax + 1) + ".");
+           
+        }
+
+    }
+
+}
