@@ -1,0 +1,63 @@
+using System.Linq.Expressions;
+
+namespace ZgadnijLiczbe
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+            Console.Write("Ile zestawów chcesz wprowadzić? ");
+
+            int n = Convert.ToInt32(Console.ReadLine());
+
+
+            int[,] zestawy = new int[n, 6];
+
+
+
+            for (int w = 0; w < n; w++)
+            {
+                Console.WriteLine("Zestaw nr " + (w + 1) + ":");
+
+                for (int k = 0; k < 6; k++)
+                {
+                    Console.Write(" Liczba nr " + (k + 1) + ": ");
+                    zestawy[w, k] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("\n");
+            for (int w = 0; w < n; w++)
+            {
+                Console.WriteLine("| ");
+                for (int k=0; k<6; k++)
+                {
+                    Console.Write($"{zestawy[w, k],6} ");
+                }
+                Console.Write("|");
+
+            }
+
+            Console.WriteLine("\n");
+            for (int w = 0; w < n; w++)
+            {
+                double suma = 0;
+                for (int k = 0; k < 6; k++)
+                {
+                    suma += zestawy[w, k];
+                }
+                Console.WriteLine($"Suma wiersza { w+1}: { suma}");
+
+            }
+
+
+
+        }
+
+    }
+}
