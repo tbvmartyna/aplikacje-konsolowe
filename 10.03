@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int liczba;
+        bool poprawnaLiczba = false;
+
+        Console.WriteLine("Podaj liczbę całkowitą z przedziału od 10 do 99.");
+
+        do
+        {
+            Console.Write("Twój wybór: ");
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out liczba))
+            {
+                if (liczba >= 10 && liczba <= 99)
+                {
+                    poprawnaLiczba = true;
+                }
+                else
+                {
+                    Console.WriteLine("Liczba musi być z przedziału od 10 do 99. Spróbuj ponownie.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("To nie jest poprawna liczba całkowita. Spróbuj ponownie.");
+            }
+
+        } while (!poprawnaLiczba);
+
+        if (liczba % 2 == 0)
+        {
+            Console.WriteLine($"Liczba {liczba} jest parzysta.");
+        }
+        else
+        {
+            Console.WriteLine($"Liczba {liczba} jest nieparzysta.");
+        }
+    }
+}
