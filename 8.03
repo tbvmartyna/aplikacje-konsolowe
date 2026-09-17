@@ -1,0 +1,51 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ile zestawów chcesz wylosować? ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        Random generator = new Random();
+        int[,] zestawy = new int[n, 6];
+        for (int w = 0; w < n; w++)
+        {
+            bool[] uzyte = new bool[50];
+            int ile = 0;
+
+            while (ile < 6)
+            {
+                int kandydat = generator.Next(1, 50); 
+                if (!uzyte[kandydat])
+                {
+                    zestawy[w, ile] = kandydat;
+                    uzyte[kandydat] = true;
+                    ile++;
+                }
+            }
+        }
+        int[]licznik = new int[50];
+        int najczestszaLiczba = 1;
+        int maksWystapien = licznik[1];
+       
+        for (int w = 0; w < n; w++)
+        {
+            Console.Write("Zestaw nr " + (w + 1) + ": ");
+            for (int k = 0; k < 6; k++)
+
+            {
+                Console.Write(zestawy[w, k] + " ");
+            }
+            Console.WriteLine();
+        }
+        for (int i = 2; i <= 49; i++)
+        {
+            if (licznik[i] > maksWystapien)
+            {
+                maksWystapien = licznik[i];
+                najczestszaLiczba = i;
+            }
+        }
+        Console.WriteLine("Najczęściej wylosowano liczbę " + najczestszaLiczba +
+             " (" + maksWystapien + " raz(y)).");
+    }
+}
