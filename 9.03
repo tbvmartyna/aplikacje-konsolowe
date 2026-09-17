@@ -1,0 +1,58 @@
+using System;
+namespace Loteria
+
+{
+    class Program
+    {
+
+        static void WypelnijZestaw(int[] liczby, Random generator)
+        {
+            for (int i = 0; i < liczby.Length; i++)
+            {
+                liczby[i] = generator.Next(1, 50);
+            }
+        }
+     
+        static void WyswietlZestaw(int numer, int[] liczby)
+        {
+            Console.Write($"Zestaw {numer}: ");
+            foreach (int liczba in liczby)
+            {
+                Console.Write(liczba + " ");
+            }
+            Console.WriteLine();
+        }
+        static int IleParzystych(int[] liczby)
+
+        {
+            int licznik = 0;
+            for (int i=0;i<liczby.Length; i++)
+            {
+                if (liczby[i]% 2 ==0)
+                { 
+                    licznik++;
+                }
+ 
+            }
+            return licznik;
+        }
+
+        static void Main(string[] args)
+        {
+            Random generator = new Random();
+            Console.Write("Ile zestawów wylosować? ");
+            int n = int.Parse(Console.ReadLine());
+           
+            for (int zestaw = 1; zestaw <= n; zestaw++)
+            {
+                int[] liczby = new int[6];  
+                WypelnijZestaw(liczby, generator);
+                WyswietlZestaw(zestaw, liczby); 
+                IleParzystych(liczby);
+                int liczbaParzystych = IleParzystych(liczby);
+                Console.WriteLine($"Liczba parzystych {liczbaParzystych}");
+            }
+            Console.ReadKey();
+        }
+    }
+}
